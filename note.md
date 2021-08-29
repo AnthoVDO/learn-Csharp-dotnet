@@ -11,7 +11,9 @@ Console.Write("Hello, world"); //with this one, if we add this console, there wo
 - double => double j = 5.5d;  // for more info, check the difference between float, double, ... There is a memory space tricks for that;
 - var => used when we don't know which kind of variable we will asign. Remark, after the first assignement, it won't be possible to change the kind of variable. So if we assign a string, it won't be possible to assign a int for exemple.
 - bool => boolean  
-- decimal => number with decimal. Need to add m or M after the number
+- decimal => number with decimal. Need to add m or M after the number.  
+- string [] arrayName = new string [3]; => create an array of 3 strings   
+- string[] otherArr = {"hello", "test", "world"}; => initialize an array named otherArr with 3 strings
 ## concat string:  
 Console.WriteLine("Hello " + aFriend); //  
 ## string interpolation( an other kind of concatenation):  
@@ -34,6 +36,11 @@ Console.WriteLine("Hello " + aFriend); //
 - .Trim() => remove white space before and after a string  
 - .TrimEnd() => remove white space after a string  
 - .TrimStart() => remove white space before a string  
+- .StartWith(Item to check) => check if the element start with a specified item.  
+-  
+## Array methods. 
+- .Length => length of the array. 
+- foreach(int items in inventory){} => foreach method
 # Operator  
 - + - * /  
 - += -= *= /=
