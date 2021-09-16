@@ -38,9 +38,12 @@ Console.WriteLine("Hello " + aFriend); //
 - .TrimStart() => remove white space before a string  
 - .StartWith(Item to check) => check if the element start with a specified item.  
 -  
-## Array methods. 
+## Array methods 
 - .Length => length of the array. 
-- foreach(int items in inventory){} => foreach method
+- foreach(int items in inventory){} => foreach method  
+  
+## Int methods  
+int.Parse(elementToParse) => transform an element to a int  
 # Operator  
 - + - * /  
 - += -= *= /=
@@ -58,6 +61,9 @@ Console.WriteLine("Hello " + aFriend); //
 - foreach(var name in arrNames){console.WriteLine(name)};  
 - while and while do => same as javascript
 
+# Library  
+- using System => say that we are using the library named System. Allow use to use function like Console.WriteLine();
+
 
 # Note :  
 - All methods start with a Capital letter  
@@ -67,5 +73,10 @@ Console.WriteLine("Hello " + aFriend); //
 - use \\ for path file because only one \ is an escape character  
 # Remark :  
 - Learn more about float, integer and double  
-- 
+- To show special character add this line before the console : Console.OutputEncoding = System.Text.Encoding.UTF8;  
+  
+ # ShortCut Visual Studio  
+ - cw tab tab => Console.WriteLine();
+ - try/catch work barely like javascript except that we need to pay attention to the scope  
+ - 
 
