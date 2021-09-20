@@ -59,7 +59,13 @@ int.Parse(elementToParse) => transform an element to a int
 # Loop  
 - For loop => same as javascript  
 - foreach(var name in arrNames){console.WriteLine(name)};  
-- while and while do => same as javascript
+- while and while do => same as javascript  
+  
+# Function  
+static int functionName(){} => to create a function, we use: static, value that the function return (int here), name, arguments, curly brackets
+static myName = Antho => The word static is used to make a variable global. So I can use it in other function  
+void => mean empty so the function is executed but return nothing. We can use it with a global variable  
+
 
 # Library  
 - using System => say that we are using the library named System. Allow use to use function like Console.WriteLine();
@@ -73,7 +79,8 @@ int.Parse(elementToParse) => transform an element to a int
 - use \\ for path file because only one \ is an escape character  
 # Remark :  
 - Learn more about float, integer and double  
-- To show special character add this line before the console : Console.OutputEncoding = System.Text.Encoding.UTF8;  
+- To show special character add this line before the console : Console.OutputEncoding = System.Text.Encoding.UTF8;   
+- Better to use function which return value so try to avoid static void 
   
  # ShortCut Visual Studio  
  - cw tab tab => Console.WriteLine();
