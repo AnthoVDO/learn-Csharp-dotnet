@@ -12,8 +12,11 @@ Console.Write("Hello, world"); //with this one, if we add this console, there wo
 - var => used when we don't know which kind of variable we will asign. Remark, after the first assignement, it won't be possible to change the kind of variable. So if we assign a string, it won't be possible to assign a int for exemple.
 - bool => boolean  
 - decimal => number with decimal. Need to add m or M after the number.  
+- float number = 1.75f; => float number  
+- double number = 1.75d; => double number. It's like float but more precise. So better check before use it  
 - string [] arrayName = new string [3]; => create an array of 3 strings   
-- string[] otherArr = {"hello", "test", "world"}; => initialize an array named otherArr with 3 strings
+- string[] otherArr = {"hello", "test", "world"}; => initialize an array named otherArr with 3 strings  
+- const int NUMBER_MIN = 0 ; => to make a const variable
 ## concat string:  
 Console.WriteLine("Hello " + aFriend); //  
 ## string interpolation( an other kind of concatenation):  
@@ -65,6 +68,7 @@ int.Parse(elementToParse) => transform an element to a int
 static int functionName(){} => to create a function, we use: static, value that the function return (int here), name, arguments, curly brackets
 static myName = Antho => The word static is used to make a variable global. So I can use it in other function  
 void => mean empty so the function is executed but return nothing. We can use it with a global variable  
+static int functionName(string parametreName) {} => function returning int taking string parametre
 
 
 # Library  
