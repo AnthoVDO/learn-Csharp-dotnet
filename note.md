@@ -16,7 +16,8 @@ Console.Write("Hello, world"); //with this one, if we add this console, there wo
 - double number = 1.75d; => double number. It's like float but more precise. So better check before use it  
 - string [] arrayName = new string [3]; => create an array of 3 strings   
 - string[] otherArr = {"hello", "test", "world"}; => initialize an array named otherArr with 3 strings  
-- const int NUMBER_MIN = 0 ; => to make a const variable
+- const int NUMBER_MIN = 0 ; => to make a const variable  
+- enum => a kind of variable that store value more or less like an object in javascript. Need to look further 
 ## concat string:  
 Console.WriteLine("Hello " + aFriend); //  
 ## string interpolation( an other kind of concatenation):  
