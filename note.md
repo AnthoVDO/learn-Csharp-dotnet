@@ -1,9 +1,13 @@
 # Csharp and dotnet note  
 I followed the "Learn C# Basics 1/2/3 of 3 with Scott and Cherita on youtube  
 channel: Scott Hannselman  
+  
+
 ## Use console:  
 Console.WriteLine("Hello, world!");  //to have a single line;  
-Console.Write("Hello, world"); //with this one, if we add this console, there won't be any return line
+Console.Write("Hello, world"); //with this one, if we add this console, there won't be any return line  
+  
+
 ## Build-in variables:  
 - string => string myVariable = "John";  // it work with camelCase, PascalCase, kabbo-case, ...  
 - interger => int myNumber = 17; 
@@ -17,20 +21,29 @@ Console.Write("Hello, world"); //with this one, if we add this console, there wo
 - string [] arrayName = new string [3]; => create an array of 3 strings   
 - string[] otherArr = {"hello", "test", "world"}; => initialize an array named otherArr with 3 strings  
 - const int NUMBER_MIN = 0 ; => to make a const variable  
-- enum => a kind of variable that store value more or less like an object in javascript. Need to look further 
+- enum => a kind of variable that store value more or less like an object in javascript. Need to look further  
+## Variable from module:  
+- List<int> liste = new List<int>();
+- var liste = new List<int>();
+- var liste = new List<int>(){"item1", "item2", "item3"};
+  
 ## concat string:  
 Console.WriteLine("Hello " + aFriend); //  
+  
+
 ## string interpolation( an other kind of concatenation):  
 - Console.WriteLine($"Hello {aFriend}");  //a little like ECScript 2015 except that the dollar sign is before the string  
 - @ before a string allow litteral. It will keep spacing, tab and avoid escaping character exemple : Console.WriteLine(@"   c:\source\repos   
       (this is where your code goes)");  
-- we can also combine $@ before a string 
+- we can also combine $@ before a string   
+  
 ## comments  
 - // => single line comment  
 - /* */ => multiple line comment  
 - '' => only one charactere  
 - "" => a string  
-- Console.WriteLine(12.3m); => use m after the number to tell C# that we want to use a decimal. Note: we can use m or M 
+- Console.WriteLine(12.3m); => use m after the number to tell C# that we want to use a decimal. Note: we can use m or M   
+  
 # Methods  
 ## String methods  
 - .ToUpper() => change to upper case  // we can add culture inside because the letter aren't the same in all country ex: myString.ToUpper(new CultureInfo("en-US", false)
@@ -42,11 +55,20 @@ Console.WriteLine("Hello " + aFriend); //
 - .TrimStart() => remove white space before a string  
 - .StartWith(Item to check) => check if the element start with a specified item.  
 - we can use [] to select a character like in javascript
-- we can use \n to return line
+- we can use \n to return line  
+  
+
 ## Array methods 
 - .Length => length of the array. 
 - foreach(int items in inventory){} => foreach method  
-  
+## Listes methods  
+ - myList.Add(itemToAdd); => add an item to the list  
+ - myList.Count => it's the same as length method for string or array  
+ - myList.Remove(number or string to match) => will delete the first item that match the argument  
+ - myList.RemoveAt(item position) => will delete the item at a determined position  
+ - myList.Contains(item to match); => check if the list contain a value and return a bool  
+ - myList.GetRange(0, 3); => return 3 items in the list starting at position 0 
+ 
 ## Int methods  
 int.Parse(elementToParse) => transform an element to a int  
 # Operator  
@@ -61,6 +83,8 @@ int.Parse(elementToParse) => transform an element to a int
 - if is the same as javascript => if(){}  // curly bracket are optionnal if there is only one line
 - ternary operator like in javascript => question ? answer A : answer B;  
 - switch case is the same as javascript  
+  
+  
 # Loop  
 - For loop => same as javascript  
 - foreach(var name in arrNames){console.WriteLine(name)};  
@@ -83,10 +107,13 @@ static int functionName(string parametreName) {} => function returning int takin
 - In Vs cide, the wrench is a property =>   .Length  
 - Don't forget semicolon ;  
 - use \\ for path file because only one \ is an escape character  
+  
+
 # Remark :  
 - Learn more about float, integer and double  
 - To show special character add this line before the console : Console.OutputEncoding = System.Text.Encoding.UTF8;   
-- Better to use function which return value so try to avoid static void 
+- Better to use function which return value so try to avoid static void  
+- an array have a defined number of content. if we don't know it, we need to use the Lists
   
  # ShortCut Visual Studio  
  - cw tab tab => Console.WriteLine();
