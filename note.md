@@ -41,7 +41,8 @@ Console.WriteLine("Hello " + aFriend); //
 - .TrimEnd() => remove white space after a string  
 - .TrimStart() => remove white space before a string  
 - .StartWith(Item to check) => check if the element start with a specified item.  
--  
+- we can use [] to select a character like in javascript
+- we can use \n to return line
 ## Array methods 
 - .Length => length of the array. 
 - foreach(int items in inventory){} => foreach method  
