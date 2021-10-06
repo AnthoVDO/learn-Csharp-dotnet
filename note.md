@@ -26,6 +26,11 @@ Console.Write("Hello, world"); //with this one, if we add this console, there wo
 - List<int> liste = new List<int>();
 - var liste = new List<int>();
 - var liste = new List<int>(){"item1", "item2", "item3"};
+- ArrayList a = new ArrayList(); // It isn't possible to use differents types inside an array or a list. But we can with an arraylist so not strictly typed => like javascript array but mixed type isn't a good practice
+- var a = new ArrayList();
+- var d = new Dictionary<string, string>(); create a new dictionary that will work with key value. it work like an object in javascript.
+ exemple: d.Add("John", "0032492123456");
+- 
   
 ## concat string:  
 Console.WriteLine("Hello " + aFriend); //  
@@ -40,7 +45,7 @@ Console.WriteLine("Hello " + aFriend); //
 ## comments  
 - // => single line comment  
 - /* */ => multiple line comment  
-- '' => only one charactere  
+- '' => only one charactere  => char a string with one character doesn't exist
 - "" => a string  
 - Console.WriteLine(12.3m); => use m after the number to tell C# that we want to use a decimal. Note: we can use m or M   
   
@@ -61,13 +66,17 @@ Console.WriteLine("Hello " + aFriend); //
 ## Array methods 
 - .Length => length of the array. 
 - foreach(int items in inventory){} => foreach method  
+- Array.Sort(myArr);
 ## Listes methods  
- - myList.Add(itemToAdd); => add an item to the list  
- - myList.Count => it's the same as length method for string or array  
- - myList.Remove(number or string to match) => will delete the first item that match the argument  
- - myList.RemoveAt(item position) => will delete the item at a determined position  
- - myList.Contains(item to match); => check if the list contain a value and return a bool  
- - myList.GetRange(0, 3); => return 3 items in the list starting at position 0 
+- myList.Add(itemToAdd); => add an item to the list  
+- myList.Count => it's the same as length method for string or array  
+- myList.Remove(number or string to match) => will delete the first item that match the argument  
+- myList.RemoveAt(item position) => will delete the item at a determined position  
+- myList.Contains(item to match); => check if the list contain a value and return a bool  
+- myList.GetRange(0, 3); => return 3 items in the list starting at position 0 
+- myList.Sort();  => sort in the alphabetic ascendant order.  
+- myList.OrderBy(e=> effect to give); => using Linq to add feature to the sort method (shallow copy)
+ 
  
 ## Int methods  
 int.Parse(elementToParse) => transform an element to a int  
@@ -113,7 +122,8 @@ static int functionName(string parametreName) {} => function returning int takin
 - Learn more about float, integer and double  
 - To show special character add this line before the console : Console.OutputEncoding = System.Text.Encoding.UTF8;   
 - Better to use function which return value so try to avoid static void  
-- an array have a defined number of content. if we don't know it, we need to use the Lists
+- an array have a defined number of content. if we don't know it, we need to use the Lists  
+- if we remove an item from a list while using a loop, we need to start from the end because the list length change.
   
  # ShortCut Visual Studio  
  - cw tab tab => Console.WriteLine();
