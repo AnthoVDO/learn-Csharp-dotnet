@@ -32,17 +32,17 @@ Console.Write("Hello, world"); //with this one, if we add this console, there wo
  exemple: d.Add("John", "0032492123456");
 - 
   
-## concat string:  
+## Concat string:  
 Console.WriteLine("Hello " + aFriend); //  
   
 
-## string interpolation( an other kind of concatenation):  
+## String interpolation( an other kind of concatenation):  
 - Console.WriteLine($"Hello {aFriend}");  //a little like ECScript 2015 except that the dollar sign is before the string  
 - @ before a string allow litteral. It will keep spacing, tab and avoid escaping character exemple : Console.WriteLine(@"   c:\source\repos   
       (this is where your code goes)");  
 - we can also combine $@ before a string   
   
-## comments  
+## Comments  
 - // => single line comment  
 - /* */ => multiple line comment  
 - '' => only one charactere  => char a string with one character doesn't exist
@@ -50,6 +50,8 @@ Console.WriteLine("Hello " + aFriend); //
 - Console.WriteLine(12.3m); => use m after the number to tell C# that we want to use a decimal. Note: we can use m or M   
   
 # Methods  
+*Need to know Tris and Linq*  
+*Good to know Passing Reference*
 ## String methods  
 - .ToUpper() => change to upper case  // we can add culture inside because the letter aren't the same in all country ex: myString.ToUpper(new CultureInfo("en-US", false)
 - .ToLower() => change to lower case  
