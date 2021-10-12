@@ -142,8 +142,9 @@ static int functionName(string parametreName) {} => function returning int takin
 - an array have a defined number of content. if we don't know it, we need to use the Lists  
 - if we remove an item from a list while using a loop, we need to start from the end because the list length change.  
 - Don't put too much stuff in public. If we need to access a name or something, use as much as possible function(accessor) to avoid erasing the values OR properties  
-- For more info about properties and accessor check section 10 (105 and 106
-  
+- For more info about properties and accessor check section 10 (105 and 106)  
+- Check string builder  
+
  # ShortCut Visual Studio  
  - cw tab tab => Console.WriteLine();
  - try/catch work barely like javascript except that we need to pay attention to the scope  
