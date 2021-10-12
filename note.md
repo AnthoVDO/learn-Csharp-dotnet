@@ -22,6 +22,13 @@ Console.Write("Hello, world"); //with this one, if we add this console, there wo
 - string[] otherArr = {"hello", "test", "world"}; => initialize an array named otherArr with 3 strings  
 - const int NUMBER_MIN = 0 ; => to make a const variable  
 - enum => a kind of variable that store value more or less like an object in javascript. Need to look further  
+- **Class**  
+- class MyClass {  
+ *variables*  
+ *constructor*  
+ *method*  
+ }
+- 
 ## Variable from module:  
 - List<int> liste = new List<int>();
 - var liste = new List<int>();
@@ -81,7 +88,15 @@ Console.WriteLine("Hello " + aFriend); //
  
  
 ## Int methods  
-int.Parse(elementToParse) => transform an element to a int  
+- int.Parse(elementToParse) => transform an element to a int   
+  
+## Class/object methods  
+- ClassName.OrderBy(e=>e.publicVariable).ToList(); //Linq method  
+- use static in a class to create a variable that will stay the same and that we can use to increment number  
+- public string name { get; private set; init;}; => variable with properties  
+- public string name { get{function mode} set{function mode}} => variable with properties en function mode. If one is in function mode, the other should be in function mode  
+- 
+  
 # Operator  
 - + - * /  
 - += -= *= /=
@@ -125,7 +140,9 @@ static int functionName(string parametreName) {} => function returning int takin
 - To show special character add this line before the console : Console.OutputEncoding = System.Text.Encoding.UTF8;   
 - Better to use function which return value so try to avoid static void  
 - an array have a defined number of content. if we don't know it, we need to use the Lists  
-- if we remove an item from a list while using a loop, we need to start from the end because the list length change.
+- if we remove an item from a list while using a loop, we need to start from the end because the list length change.  
+- Don't put too much stuff in public. If we need to access a name or something, use as much as possible function(accessor) to avoid erasing the values OR properties  
+- For more info about properties and accessor check section 10 (105 and 106
   
  # ShortCut Visual Studio  
  - cw tab tab => Console.WriteLine();
