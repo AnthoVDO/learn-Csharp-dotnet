@@ -144,6 +144,8 @@ static int functionName(string parametreName) {} => function returning int takin
 - Don't put too much stuff in public. If we need to access a name or something, use as much as possible function(accessor) to avoid erasing the values OR properties  
 - For more info about properties and accessor check section 10 (105 and 106)  
 - Check string builder  
+- Private: access only within the function or class / Public: access everywhere / protected: it's private but the childrens can access them with inheritance  
+- 
 
  # ShortCut Visual Studio  
  - cw tab tab => Console.WriteLine();
