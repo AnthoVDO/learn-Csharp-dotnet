@@ -70,7 +70,7 @@ Console.WriteLine("Hello " + aFriend); //
 - .StartWith(Item to check) => check if the element start with a specified item.  
 - we can use [] to select a character like in javascript
 - we can use \n to return line  
-  
+- string.IsNullOrEmpty => ((myString == "") || (myString == null )) 
 
 ## Array methods 
 - .Length => length of the array. 
@@ -85,6 +85,7 @@ Console.WriteLine("Hello " + aFriend); //
 - myList.GetRange(0, 3); => return 3 items in the list starting at position 0 
 - myList.Sort();  => sort in the alphabetic ascendant order.  
 - myList.OrderBy(e=> effect to give); => using Linq to add feature to the sort method (shallow copy)
+- myList.Select(i=> function(i).ToList()); => use Linq and allow us to make modification without using foreach. Select will select each element and make the modification that we want
  
  
 ## Int methods  
