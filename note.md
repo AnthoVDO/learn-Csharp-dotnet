@@ -96,7 +96,8 @@ Console.WriteLine("Hello " + aFriend); //
 - use static in a class to create a variable that will stay the same and that we can use to increment number  
 - public string name { get; private set; init;}; => variable with properties  
 - public string name { get{function mode} set{function mode}} => variable with properties en function mode. If one is in function mode, the other should be in function mode  
-- 
+- To create a class which inherit from an other one : class children : parent {}  
+- To create a constructor from the parent constructor : children() : base(arg that we want from the parents){}
   
 # Operator  
 - + - * /  
