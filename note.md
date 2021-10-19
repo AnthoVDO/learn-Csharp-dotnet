@@ -70,7 +70,11 @@ Console.WriteLine("Hello " + aFriend); //
 - .StartWith(Item to check) => check if the element start with a specified item.  
 - we can use [] to select a character like in javascript
 - we can use \n to return line  
-- string.IsNullOrEmpty => ((myString == "") || (myString == null )) 
+- string.IsNullOrEmpty => ((myString == "") || (myString == null ))  
+- StringBuilder texte = new stringBuilder(); => used to create string quicker than concat. if we have a big string that we modify a lot, we need to use it   
+- texte.Append(mytext); => With string builder, we need to append string because concatenation doens't work  
+- texte.ToString(); => used to transfor a stringbuilder  
+- 
 
 ## Array methods 
 - .Length => length of the array. 
@@ -126,7 +130,29 @@ static int functionName(string parametreName) {} => function returning int takin
 
 
 # Library  
-- using System => say that we are using the library named System. Allow use to use function like Console.WriteLine();
+- using System; => say that we are using the library named System. Allow use to use function like Console.WriteLine();
+- using System.IO; => IO mean input output, allow us to use file  
+-  
+# Files  
+- File.WriteAllText(path, content that we want to add); => ex: File.WriteAllText("myText.txt", "Here is my content inside");  
+- File.ReadAllText(path); => read the text from a file ex: String result = File.ReadAllText("myText.txt");  
+- File.AppendAllText(filename/path, content to add);  
+- File.WriteAllLines(filename/path, myList); => used to write text from a List  
+- File.ReadAllLines(filename/path); => Read a file and transform it inside a list instead of a single text;  
+- Environment.GetFolderPath(Environment.SpecialFolder.Personal); => Path to the document folder  
+- Path.Combine(path, filename); => Linux, Windows and mac doesn't use the same methode for theirs path so this one is used to fit all. ex: string pathAndFile = Path.Combine(path, filename); // Used this methode to save a file in an other place and the programme folder  
+- SpecialFolder reference: [Personal == document] [Desktop] []  
+- Directory.CreateDirectory(path); => create a foler. Don't forget to used the previous elements if we want to used this directory  
+- File.Exists(path/file); => return true if the file exist  
+- Directory.Exists(path); => return true if the folder exist  
+- File.Copy(fileToCopy, destination copy/new file); => Copy a file  
+- File.Delete(path); => Delete a file  
+- File.Move(); => used to rename or move a file  
+- File.CreateText(path); => used to handle big data. It will directly write the text inside the file instead of allocating memory and then writing it to the file ex: var writeStream = File.CreateText(pathAndFile);  
+- writeStream.WriteLine(string to write); => used to write inside the file  
+Remark: While using stream methode, we need to delimit it with using because the stream take some memory space. Ex: using(var writeStream = File.CreateText(pathAndFile)){function to execute}  
+- File.OpenText(path); => used to open a big file using stream 
+
 
 
 # Note :  
