@@ -151,9 +151,16 @@ static int functionName(string parametreName) {} => function returning int takin
 - File.CreateText(path); => used to handle big data. It will directly write the text inside the file instead of allocating memory and then writing it to the file ex: var writeStream = File.CreateText(pathAndFile);  
 - writeStream.WriteLine(string to write); => used to write inside the file  
 Remark: While using stream methode, we need to delimit it with using because the stream take some memory space. Ex: using(var writeStream = File.CreateText(pathAndFile)){function to execute}  
-- File.OpenText(path); => used to open a big file using stream 
+- File.OpenText(path); => used to open a big file using stream  
+- to used JSON, we need packets so rightClick on Dependency>package>package Nuget>search Json> Newtonsoft.Json
 
-
+# JSON  
+- JsonConvert.SerializeObject(myVariable); => Used to transform a variable into a json language. It can have string, int, list, ...  
+- File.ReadAlltext(myJsonFile.json); => This can be used to read the data. Check below for more info  
+- JsonConvert.DeserializeObject<Personne>(myVariable); => Convert JSON to C#. Use the class Personne as a model  
+- Warning, if the Class have the variables in private, we need to have a constructor which is public. But it's better to use variables with Get and private Set with a constructor. The constructor will allow to set the values while using Deserialize and the get will allow to get the data while serialize
+- Warning2, function won't be inside because it isn't data  
+- 
 
 # Note :  
 - All methods start with a Capital letter  
@@ -178,5 +185,5 @@ Remark: While using stream methode, we need to delimit it with using because the
  # ShortCut Visual Studio  
  - cw tab tab => Console.WriteLine();
  - try/catch work barely like javascript except that we need to pay attention to the scope  
- - 
+ - ctrl+k + c to comment code and ctrl+k+u to uncomment
 
