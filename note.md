@@ -160,7 +160,18 @@ Remark: While using stream methode, we need to delimit it with using because the
 - JsonConvert.DeserializeObject<Personne>(myVariable); => Convert JSON to C#. Use the class Personne as a model  
 - Warning, if the Class have the variables in private, we need to have a constructor which is public. But it's better to use variables with Get and private Set with a constructor. The constructor will allow to set the values while using Deserialize and the get will allow to get the data while serialize
 - Warning2, function won't be inside because it isn't data  
-- 
+-  
+# WebClient  
+** used to make API request **  
+- using WebClient from using system.net  
+- var webClient = new WebClient();  
+- webClient.DownloadString(url); => http get  ex: .txt, .html, .json, ... The return will be a string
+- webClient.UploadString(); => http post  
+- webClient.DownloadFile(url, name that you want to give); => .jpg, ... The return will be void because it will download the file and that's all  
+- webClient.UploadFile();  
+- webClient.DownloadData();  
+- webClient.UploadData();  
+*There is also asyn methods !*
 
 # Note :  
 - All methods start with a Capital letter  
