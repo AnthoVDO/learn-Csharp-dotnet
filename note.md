@@ -74,7 +74,7 @@ Console.WriteLine("Hello " + aFriend); //
 - StringBuilder texte = new stringBuilder(); => used to create string quicker than concat. if we have a big string that we modify a lot, we need to use it   
 - texte.Append(mytext); => With string builder, we need to append string because concatenation doens't work  
 - texte.ToString(); => used to transfor a stringbuilder  
-- 
+- texte.PadLeft(10, '0'); => will complet the string with char '0' to arrive to 10 character
 
 ## Array methods 
 - .Length => length of the array. 
