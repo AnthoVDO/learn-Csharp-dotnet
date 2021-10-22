@@ -171,7 +171,19 @@ Remark: While using stream methode, we need to delimit it with using because the
 - webClient.UploadFile();  
 - webClient.DownloadData();  
 - webClient.UploadData();  
-*There is also asyn methods !*
+*There is also asyn methods !*  
+  
+## DateTime ##  
+- DateTime date = DateTime.Now(); => Get the current date and hour  
+- date.Year  
+- date.Month  
+- date.ToString("dd/MM/yyyy HH:mm:ss");  => use to string to format date
+- date.ToString("dddd"); => Monday, Tuesday, ....  
+- CultureInfo cultureFrancais = CultureInfo.GetCultureInfo("fr-FR");  Get the info from the viewer to optimise the date
+- date.ToString("dd/MM/yyyy HH:mm:ss", cultureFrançais);  
+- DateTime tomorrow = date.AddDays(1);  => Get tomorrow date  
+- var diff = tomorrow-date;  => diff.TotalDays // to know how many days OR diff.TotalHours // to know how many hours OR ...  
+- 
 
 # Note :  
 - All methods start with a Capital letter  
@@ -179,6 +191,7 @@ Remark: While using stream methode, we need to delimit it with using because the
 - In Vs cide, the wrench is a property =>   .Length  
 - Don't forget semicolon ;  
 - use \\ for path file because only one \ is an escape character  
+- delegate => used to add function as argument inside an other function
   
 
 # Remark :  
