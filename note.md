@@ -211,3 +211,27 @@ Remark: While using stream methode, we need to delimit it with using because the
  - try/catch work barely like javascript except that we need to pay attention to the scope  
  - ctrl+k + c to comment code and ctrl+k+u to uncomment
 
+# Asp.net core  
+## How to take info from a data base and return it as a json for exemple
+* Like for all database related, we need to have a model *  
+1) create create a variable named _context with private readonly ProjectName.FolderName.FileName => ex:  
+    private readonly Pizza_Pito.Data.DataContext _context;  
+2) create a constructor wich take the above dataContext as a variable and assign it inside => ex:  
+  ```
+    public ApiController(Pizza_Pito.Data.DataContext context)
+    {
+    _context = context;
+    }  
+  ```
+3) create a list from the class => ex:  
+  ```
+    public IList<Pizza> Pizza { get; set; }  
+  ```
+4) make a function to assign the data to the created list => ex:  
+  ```
+    public async Task OnGetAsync()
+        {
+            Pizza = await _context.Pizzas.ToListAsync();
+        }  
+```
+ 
