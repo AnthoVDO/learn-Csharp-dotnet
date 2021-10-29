@@ -183,7 +183,10 @@ Remark: While using stream methode, we need to delimit it with using because the
 - date.ToString("dd/MM/yyyy HH:mm:ss", cultureFrançais);  
 - DateTime tomorrow = date.AddDays(1);  => Get tomorrow date  
 - var diff = tomorrow-date;  => diff.TotalDays // to know how many days OR diff.TotalHours // to know how many hours OR ...  
-- 
+## Generate vue from a model ##  
+1) Create the folder where you want the vue (Create, Read, Delete, update)  
+2) Compile the project (right click generate)  
+3) Select the target folder> right click> create new automatic element generation> Razor page with Entity Framework (CRUD)> select class and context>add  
 
 # Note :  
 - All methods start with a Capital letter  
