@@ -234,4 +234,75 @@ Remark: While using stream methode, we need to delimit it with using because the
             Pizza = await _context.Pizzas.ToListAsync();
         }  
 ```
- 
+# Make new project  
+- Create a folder named models  
+- Create a class file for the models  
+- Add properties to the class  
+__  
+- Create a data folder  
+- Create the datacontext file class in the data folder to link the models to the database with entity framework  
+- Inside the: dataContext is just a name. The main part is that it is a child from DbContext  (from entityFrameworkCore)  
+- Define a constructor that take options parameter => see documentation  
+- Declare which model to use  
+__  
+- initiate the dataContext inside Startup.cs>ConfigureServices> service.AddDbContext.....  
+__  
+- Add the connection string inside appsettings.json "ConnectionStrings":{"DefaultConnection": "Data Source = fileName.db"},  
+__  
+- If we want to use make a link to the database while clicking a page, we need to:  
+1) create a variable with a DataContext type.  
+2) add it to the constructor  
+3) asign it with the constructor.  
+For more info, check Dotnet core Dependency injection  
+```
+  public class IndexModel : PageModel
+    {
+        private readonly ILogger<IndexModel> _logger;
+
+        DataContext dataContext;
+
+        public IndexModel(ILogger<IndexModel> logger, DataContext dataContext)
+        {
+            _logger = logger;
+            this.dataContext = dataContext;
+        }
+
+        public void OnGet()
+        {
+            var user = new User() {firstName = "test de la data base" };
+            dataContext.Users.Add(user);
+            dataContext.SaveChanges();
+
+        }
+    }
+```
+After that, we can create a new object. But before having the possibility to add this object to the database, we need to update the Program.cs to create the table before host.Run  
+__  
+- Change the program.cs file to create the table  
+*To create db if not exist*
+```  
+  //CreateHostBuilder(args).Build().Run();
+  var host = CreateHostBuilder(args).Build();
+  CreateDbIfNotExists(host);
+  host.Run();  
+```  
+*The function*  
+ ```
+  private static void CreateDbIfNotExists(IHost host)
+        {
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    var context = services.GetRequiredService<DataContext>();
+                    context.Database.EnsureCreated();
+                }
+                catch (Exception ex)
+                {
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex, "An error occurred creating the DB.");
+                }
+            }
+        }
+ ``` 
