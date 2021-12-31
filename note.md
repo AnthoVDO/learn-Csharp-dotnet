@@ -1,6 +1,7 @@
 # Csharp and dotnet note  
-I followed the "Learn C# Basics 1/2/3 of 3 with Scott and Cherita on youtube  
+Followed the "Learn C# Basics 1/2/3 of 3 with Scott and Cherita on youtube  
 channel: Scott Hannselman  
+Followed Développeur C# | Formation complète 2021 on Udemy  
   
 
 ## Use console:  
