@@ -162,7 +162,9 @@ Remark: While using stream methode, we need to delimit it with using because the
 - JsonConvert.DeserializeObject<Personne>(myVariable); => Convert JSON to C#. Use the class Personne as a model  
 - Warning, if the Class have the variables in private, we need to have a constructor which is public. But it's better to use variables with Get and private Set with a constructor. The constructor will allow to set the values while using Deserialize and the get will allow to get the data while serialize
 - Warning2, function won't be inside because it isn't data  
--  
+# Path  
+While using path, we can have some issue according to the methode. It can try to access the computer path or the server path.  
+If we want to refer the server path, we need to use [IWebHostEnvironment](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.hosting.iwebhostenvironment?view=aspnetcore-3.1) see also [StackOverFlow](https://stackoverflow.com/questions/49398965/what-is-the-equivalent-of-server-mappath-in-asp-net-core)
 # WebClient  
 ** used to make API request **  
 - using WebClient from using system.net  
