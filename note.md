@@ -135,6 +135,7 @@ static int functionName(string parametreName) {} => function returning int takin
 - using System.IO; => IO mean input output, allow us to use file  
 -  
 # Files  
+** REMARK ** If we want to use the file method inside a backend like mvc or razor pages, we need to use System.IO.File because the file methode already exist !!  
 - File.WriteAllText(path, content that we want to add); => ex: File.WriteAllText("myText.txt", "Here is my content inside");  
 - File.ReadAllText(path); => read the text from a file ex: String result = File.ReadAllText("myText.txt");  
 - File.AppendAllText(filename/path, content to add);  
