@@ -191,6 +191,12 @@ If we want to refer the server path, we need to use [IWebHostEnvironment](https:
 1) Create the folder where you want the vue (Create, Read, Delete, update)  
 2) Compile the project (right click generate)  
 3) Select the target folder> right click> create new automatic element generation> Razor page with Entity Framework (CRUD)> select class and context>add  
+  
+##Datbase  
+To Use the database, there is the ORM EntityFrameWork to help us  
+###Link in database  
+- many-to-one => exemple a book have one author: ```class book { public Author Author {get; set;}}```  
+- one-to-many => exemple an author have multiple book: ```class Author{public ICollection<Book> Books{get; set;}}```
 
 # Note :  
 - All methods start with a Capital letter  
