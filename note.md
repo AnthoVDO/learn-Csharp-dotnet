@@ -196,8 +196,24 @@ If we want to refer the server path, we need to use [IWebHostEnvironment](https:
 To Use the database, there is the ORM EntityFrameWork to help us  
 ###Link in database  
 - many-to-one => exemple a book have one author: ```class book { public Author Author {get; set;}}```  
-- one-to-many => exemple an author have multiple book: ```class Author{public ICollection<Book> Books{get; set;}}```
-
+- one-to-many => exemple an author have multiple book: ```class Author{public ICollection<Book> Books{get; set;}}```  
+- ```await _context.Books.Include(b=>b.Author).ToListAsync());``` => Include the Author from the book to the data, it's a join. On the html side ```item.Author.Name```  
+###Migration  
+- ```add-migration <name>```  
+- ```update-database```  
+- ```update-database <name of the migration>``` => To roll back add the name of the migration  
+- ```remove-migration <name>```=> To remove a migration but won't change the database  
+- ```migrationBuilder.RenameColumn("Genre", "Books", "StyleOfBook");``` => ```migrationBuilder.RenameColumn(<column name to change>, <table>, <new column name>);``` == Inside the migraiton, note inside the command line ! REMARK: we need to make it like this because the migration doesn't know when we change the name  
+!! REMARK !! We need always to write inside the up and down but reverse to roll back exemple: I want to change a column name:  
+```
+protected override void up(MigrationBuilder migrationBuilder{ 
+  migrationBuilder.RenameColumn("Genre", "Books", "StyleOfBook"); 
+  } 
+  
+protected override void Down(MigrationBuilder migrationBuilder{ 
+  migrationBuilder.RenameColumn("StyleOfBook", "Books", "Genre"); 
+  }
+```
 # Note :  
 - All methods start with a Capital letter  
 - In Vs code, the while tipping, the 3d square is a method => .ToUpper(),  .ToLower(), ...
